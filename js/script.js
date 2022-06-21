@@ -1,4 +1,21 @@
 "use strict";
+
+
+const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели","");
+console.log(numberOfFilms);
+
+
+
+
+
+
+
+
+
+
+
+
+
 //alert('Putin Huylo')
 
 //let rezult = confirm('putin huylo?');
@@ -10,14 +27,6 @@
 else {
     alert("putin huylo");
 }*/
-
-let text = "I'm from";
-let city = "Cerkassy";
-let Country = 'Ukraine';
-
-console.log(`${text} ${city}, in ${Country}`);
-
-
 
 
 
