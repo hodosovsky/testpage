@@ -201,3 +201,141 @@ else {
 /* leftBorderWidth = 12;
 console.log(leftBorderWidth);*/
 
+
+function sayHello(name) {
+return 'Привет, ${name}';
+}
+sayHello('Антон');
+
+function returnNeighboringNumbers(a) {
+    const  arr = [a-1, a, a+1 ];
+    return arr;
+
+}
+
+returnNeighboringNumbers(5);
+
+
+function getMathResult(a, b) {
+    if (b !== 0 && b > 0 && typeof(b) !== null){
+        let result = a;
+        let c = a;
+        for (let i=1; i < b; i++)
+        {            
+            result = `${result}---${c + a}`;
+            c = c + a;             
+        } 
+        return result;
+        
+    } else {return a;}
+
+}
+
+getMathResult(3,  10);
+
+
+function getMathResult(num, times) {
+    if (typeof(times) !== 'number' || times <= 0) {
+        return num;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= times; i++) {
+        if (i === times) {
+            str += `${num * i}`;
+            // Тут без черточек в конце
+        } else {
+            str += `${num * i}---`;
+            // Это тоже самое, что и
+            // str = str + num * i + "---"
+        }
+    }
+    console.log(str);
+    return str;
+}
+
+getMathResult(10, 5);
+
+function calculateVolumeAndArea(a){
+if (a <= 0 || a == null || a % 2 != 0 ){
+    console.log('При вычислении произошла ошибка');
+} else {
+    console.log(`Объем куба: ${Math.pow(a, 3)}, Площадь всей поверхности: ${6 * Math.pow(a, 2)}`);
+}
+
+}
+
+calculateVolumeAndArea(0);
+
+function getCoupeNumber(coupe) {
+    if (typeof(coupe) !== 'number' || !Number.isInteger(coupe) || coupe < 0)   {
+        return "Ошибка. Проверьте правильность введенного номера места";
+    } else if (coupe === 0 || coupe > 36 ){
+        return "Таких мест в вагоне не существует";
+    }else{
+        let numb;
+        if (coupe % 4 === 0) {
+            numb = coupe / 4;
+        } else {
+            numb = Math.floor(coupe / 4) + 1;
+        }
+
+        return numb;
+    }}
+
+
+   console.log(getCoupeNumber(35)) ;
+
+   function getTimeFromMinutes(time) {
+    if (typeof(time) !== 'number' || !Number.isInteger(time) || time <= 0)   {
+        return "Ошибка, проверьте данные";
+    } else {
+        let strTime;
+        let hour = Math.floor(time / 60);
+        let minutes = time - (hour * 60);
+        let hourstr;
+
+        switch (hour){
+        case 0: hourstr = 'Часов';
+                break;
+        case 1: hourstr = 'Час';
+                break;
+        case 2:
+        case 3:
+        case 4: hourstr = 'Часа';
+                break; 
+        default: hourstr = 'Часов';
+                 break;
+                }  
+
+    strTime = `Это ${hour} ${hourstr} и ${minutes} минут` 
+        return strTime;
+            }         
+    }
+   console.log(getTimeFromMinutes(100)) ;
+
+   function findMaxNumber() {
+    for (let i = 1; i<=4; i++){
+        a[i] = +prompt(`Введите ${i} число:`, "");
+        if (typeof(a[i - 1]) !== 'number'){
+            return console.log("0");
+        } else {let min;
+        min = math.min[a] 
+        return console.log(min);}
+    }
+
+   findMaxNumber();
+            
+            
+            
+            
+            return console.log("ok");}
+
+
+       
+    
+    findMaxNumber(1, 2, 3, 5 );
+
+    
+
